@@ -22,3 +22,41 @@ select,
 textarea {
     max-width: 280px;
 }
+/*Set width and color fa-icons*/
+
+.facebook {
+    font-size: 40px;
+    color: #2643ee;
+}
+
+.youtube {
+    font-size: 40px;
+    color: #ef1717
+}
+.instagram {
+    font-size: 40px;
+    color:#c03bf5
+}
+
+.copyright {
+    font-size: 15px;
+    color: #000000;
+}
+/*add style ul*/
+ul {
+    list-style: none;
+}
+/*add style a*/
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration: none;
+}
+a:active{
+    text-decoration: none;
+}
+ }

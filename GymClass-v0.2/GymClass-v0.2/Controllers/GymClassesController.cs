@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using GymClass_v0._2.Models;
 
-namespace GymClass_v0._2.Controllers
+namespace GymClass_v0._2.Controllers.Controllers
 {
     public class GymClassesController : Controller
     {
@@ -19,7 +19,23 @@ namespace GymClass_v0._2.Controllers
         {
             return View(db.GymClasses.ToList());
         }
-
+        //Booking toggle
+        public ActionResult BookingToggle(int id)
+        {
+            GymClass CurrentClass = db.GymClasses.Where(x => x.Id == id).FirstOrDefault();
+            ApplicationUser CurrentUser = db.Users.Where(y => y.UserName == User.Identity.Name).FirstOrDefault();
+            if (CurrentClass.AttendingMembers.Contains(CurrentUser))
+            {
+                CurrentClass.AttendingMembers.Remove(CurrentUser);
+                db.SaveChanges();
+            }
+            else
+            {
+                CurrentClass.AttendingMembers.Add(CurrentUser);
+                db.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
         // GET: GymClasses/Details/5
         public ActionResult Details(int? id)
         {

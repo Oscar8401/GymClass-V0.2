@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymClass-v0.2", "GymClass-v0.2\GymClass-v0.2.csproj", "{D29563A0-F3E3-4129-808B-6E6AC73C96F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymClass-v0.2.Tests", "GymClass-v0.2.Tests\GymClass-v0.2.Tests.csproj", "{2843B945-3055-49BE-BB3C-D0C6A2E30ABE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D29563A0-F3E3-4129-808B-6E6AC73C96F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29563A0-F3E3-4129-808B-6E6AC73C96F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29563A0-F3E3-4129-808B-6E6AC73C96F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29563A0-F3E3-4129-808B-6E6AC73C96F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2843B945-3055-49BE-BB3C-D0C6A2E30ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2843B945-3055-49BE-BB3C-D0C6A2E30ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2843B945-3055-49BE-BB3C-D0C6A2E30ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2843B945-3055-49BE-BB3C-D0C6A2E30ABE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

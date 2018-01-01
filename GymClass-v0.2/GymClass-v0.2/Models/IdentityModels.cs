@@ -4,6 +4,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace GymClass_v0._2.Models
 {
@@ -17,8 +21,25 @@ namespace GymClass_v0._2.Models
             // Add custom user claims here
             return userIdentity;
         }
+        
+        [Required(ErrorMessage = "Please enter your first name.")]
+        [DisplayName("First Name")]
+        [DisplayFormat(NullDisplayText = "Undefined")]
+        public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Please enter your last name.")]
+        [DisplayName("Last Name")]
+        [DisplayFormat(NullDisplayText = "Undefined")]
+        public string LastName { get; set; }
+        
+        public string FullName { get { return FirstName + " " + LastName; } }
+
+        [Column(TypeName = "datetime2")]
+        public DateTime TimeOfRegistration { get; set; }
+
         public virtual ICollection<GymClass> AttendedClasses { get; set; }
     }
+
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -32,5 +53,7 @@ namespace GymClass_v0._2.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<GymClass_v0._2.ViewModel.Members> Members { get; set; }
     }
 }

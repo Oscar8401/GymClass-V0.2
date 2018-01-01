@@ -8,9 +8,16 @@ namespace GymClass_v0._2.Models
     public class IndexViewModel
     {
         public bool HasPassword { get; set; }
+
         public IList<UserLoginInfo> Logins { get; set; }
+
+        [Phone]
+        [Required(ErrorMessage = "PhoneNumber. is required")]
+        [RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "Please enter valid phonenumber.")]
         public string PhoneNumber { get; set; }
+
         public bool TwoFactor { get; set; }
+
         public bool BrowserRemembered { get; set; }
     }
 

@@ -20,6 +20,7 @@ namespace GymClass_v0._2.Controllers.Controllers
             return View(db.GymClasses.ToList());
         }
         //Booking toggle
+        [Authorize]
         public ActionResult BookingToggle(int id)
         {
             GymClass CurrentClass = db.GymClasses.Where(x => x.Id == id).FirstOrDefault();
@@ -37,6 +38,7 @@ namespace GymClass_v0._2.Controllers.Controllers
             return RedirectToAction("Index");
         }
         // GET: GymClasses/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -52,6 +54,7 @@ namespace GymClass_v0._2.Controllers.Controllers
         }
 
         // GET: GymClasses/Create
+        [Authorize(Roles ="admin")]
         public ActionResult Create()
         {
             return View();
@@ -62,6 +65,7 @@ namespace GymClass_v0._2.Controllers.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles ="admin")]
         public ActionResult Create([Bind(Include = "Id,Name,StartTime,Duration,Description")] GymClass gymClass)
         {
             if (ModelState.IsValid)
@@ -75,6 +79,7 @@ namespace GymClass_v0._2.Controllers.Controllers
         }
 
         // GET: GymClasses/Edit/5
+        [Authorize(Roles ="admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -94,6 +99,7 @@ namespace GymClass_v0._2.Controllers.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles ="admin")]
         public ActionResult Edit([Bind(Include = "Id,Name,StartTime,Duration,Description")] GymClass gymClass)
         {
             if (ModelState.IsValid)
@@ -106,6 +112,7 @@ namespace GymClass_v0._2.Controllers.Controllers
         }
 
         // GET: GymClasses/Delete/5
+        [Authorize(Roles ="admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -123,6 +130,7 @@ namespace GymClass_v0._2.Controllers.Controllers
         // POST: GymClasses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles ="admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             GymClass gymClass = db.GymClasses.Find(id);

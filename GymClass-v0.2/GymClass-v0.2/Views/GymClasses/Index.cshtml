@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <button class="btn btn-success">@Html.ActionLink("New classe", "Create")</button>
 </p>
 <table class="table table-responsive table-striped">
     <tr>
@@ -41,25 +41,22 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-
+            <button class="btn btn-info">@Html.ActionLink("Details", "Details", new { id = item.Id })</button>
             @if (Request.IsAuthenticated)
             {
-                <span>|</span>
                 if (!item.AttendingMembers.Any(x => x.UserName == User.Identity.Name))
                 {
-                    @Html.ActionLink("Attend", "BookingToggle", new { id = item.Id})
+                    <button class="btn btn-primary">@Html.ActionLink("Attend", "BookingToggle", new { id = item.Id })</button> 
                 }
                 else
                 {
-                    @Html.ActionLink("Cancel", "bookingToggle", new { id = item.Id})
+                    <button class="btn btn-primary">@Html.ActionLink("Cancel", "bookingToggle", new { id = item.Id })</button> 
                 }
                 if (User.IsInRole("admin"))
                 {
-                    <span>|</span>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id})
-                    <span>|</span>
-                    @Html.ActionLink("Delete","Delete", new { id = item.Id})
+                    <button class="btn btn-info">@Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
+                    <button class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+                    
                 }
             }
         </td>

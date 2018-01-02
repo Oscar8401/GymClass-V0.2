@@ -1,4 +1,5 @@
 ﻿body {
+    font-family: 'Alegreya Sans','Source Sans Pro', 'Work Sans', sans-serif ;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -26,7 +27,7 @@ textarea {
 
 .facebook {
     font-size: 40px;
-    color: #2643ee;
+    color: #31b3f5;
 }
 
 .youtube {

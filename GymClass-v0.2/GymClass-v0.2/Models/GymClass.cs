@@ -14,6 +14,8 @@ namespace GymClass_v0._2.Models
         public int Id { get; set; }
 
         [DisplayName("First Name")]
+        [StringLength(100)]
+        [MaxWords(2)]
         public string Name { get; set; }
 
         [DataType(DataType.Date)]

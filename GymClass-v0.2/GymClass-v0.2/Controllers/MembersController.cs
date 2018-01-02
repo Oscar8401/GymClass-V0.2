@@ -13,6 +13,9 @@ using Microsoft.AspNet.Identity;
 
 namespace GymClass_v0._2.Controllers
 {
+    /// <summary>
+    /// A web API2 Controller
+    /// </summary>
     [Authorize(Roles ="admin")]
     public class MembersController : Controller
     {

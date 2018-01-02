@@ -12,7 +12,7 @@ namespace GymClass_v0._2.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(maxLength: 100),
                         StartTime = c.DateTime(nullable: false),
                         Duration = c.Time(nullable: false, precision: 7),
                         Description = c.String(nullable: false),
@@ -27,8 +27,8 @@ namespace GymClass_v0._2.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
-                        FirstName = c.String(nullable: false),
-                        LastName = c.String(nullable: false),
+                        FirstName = c.String(nullable: false, maxLength: 100),
+                        LastName = c.String(nullable: false, maxLength: 100),
                         TimeOfRegistration = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),

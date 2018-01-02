@@ -8,6 +8,7 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using GymClass_v0._2.Utility;
 
 namespace GymClass_v0._2.Models
 {
@@ -25,11 +26,15 @@ namespace GymClass_v0._2.Models
         [Required(ErrorMessage = "Please enter your first name.")]
         [DisplayName("First Name")]
         [DisplayFormat(NullDisplayText = "Undefined")]
+        [StringLength(100)]
+        [MaxWords(2)]
         public string FirstName { get; set; }
 
         [Required(ErrorMessage = "Please enter your last name.")]
         [DisplayName("Last Name")]
         [DisplayFormat(NullDisplayText = "Undefined")]
+        [StringLength(100)]
+        [MaxWords(2)]
         public string LastName { get; set; }
         
         public string FullName { get { return FirstName + " " + LastName; } }

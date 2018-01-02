@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GymClass_v0._2.Utility;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,6 +11,7 @@ namespace GymClass_v0._2.Models
     {
         [Required]
         [Display(Name = "Email")]
+        [StringLength(200)]
         public string Email { get; set; }
     }
 
@@ -48,6 +50,7 @@ namespace GymClass_v0._2.Models
     {
         [Required]
         [Display(Name = "Email")]
+        [StringLength(200)]
         public string Email { get; set; }
     }
 
@@ -56,6 +59,7 @@ namespace GymClass_v0._2.Models
         [Required]
         [Display(Name = "Email")]
         [EmailAddress]
+        [StringLength(200)]
         public string Email { get; set; }
 
         [Required]
@@ -72,6 +76,7 @@ namespace GymClass_v0._2.Models
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
+        [StringLength(200)]
         public string Email { get; set; }
 
         [Required]
@@ -87,8 +92,12 @@ namespace GymClass_v0._2.Models
 
 
         [Required]
+        [StringLength(100)]
+        [MaxWords(2)]
         public string FirstName { get; set; }
         [Required]
+        [StringLength(100)]
+        [MaxWords(2)]
         public string LastName { get; set; }
         public string FullName { get { return FirstName + " " + LastName; } }
         [Column(TypeName = "datetime2")]
@@ -100,6 +109,7 @@ namespace GymClass_v0._2.Models
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
+        [StringLength(200)]
         public string Email { get; set; }
 
         [Required]

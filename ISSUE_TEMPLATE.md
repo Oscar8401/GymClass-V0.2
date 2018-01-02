@@ -8,3 +8,4 @@ ISSUE_TEMPLATE:
 6) Improve the UX.
 7) Implement more jquery.
 8) Attend, I am using Ajax, because I don't want a full page reload.
+9) Add a search duture to the application(back-end side and not front-end).

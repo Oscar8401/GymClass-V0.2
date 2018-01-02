@@ -229,7 +229,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Img\gym.jpg" />
-    <Content Include="Img\HomePage.png" />
+    <Content Include="Img\HomePage1.png" />
     <Content Include="Img\pearl-harbor.jpg" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />

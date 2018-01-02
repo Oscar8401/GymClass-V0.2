@@ -450,7 +450,7 @@ namespace GymClass_v0._2.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "GymClasses");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

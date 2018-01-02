@@ -39,6 +39,22 @@
                 @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "text-danger" })
             </div>
         </div>
+        @*@*DropdownList*@
+        @*<div class="form-group">
+            @Html.LabelFor(m => m.Date)
+            @Html.TextBoxFor(m => m.Date, new { @class = "form-control"})
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Time)
+            @Html.TextBoxFor(m => m.Time, new { @class = "form-control"})
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.ClassType)
+            @Html.DropDownListFor(m => m.ClassType)
+        </div>*@
+
 
         <div class="form-group">
             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })

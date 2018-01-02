@@ -7,13 +7,20 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using GymClass_v0._2.Models;
+using GymClass_v0._2.Models.ViewModel;
 
 namespace GymClass_v0._2.Controllers.Controllers
 {
     public class GymClassesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        //
+        private ApplicationDbContext _context;
+        public GymClassesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+         //
         // GET: GymClasses
         public ActionResult Index()
         {
@@ -57,7 +64,11 @@ namespace GymClass_v0._2.Controllers.Controllers
         [Authorize(Roles ="admin")]
         public ActionResult Create()
         {
-            return View();
+            var viewModel = new GymClassViewModel
+            {
+                ClassTypes = _context.GymClasses.ToList()
+            };
+            return View(viewModel);
         }
 
         // POST: GymClasses/Create

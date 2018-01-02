@@ -31,6 +31,8 @@ namespace GymClass_v0._2.Models
         [MaxWords(2)]
         public string Description { get; set; }
 
+        public string ClassType { get; set; }
+
         public virtual ICollection<ApplicationUser> AttendingMembers { get; set; }
 
     }

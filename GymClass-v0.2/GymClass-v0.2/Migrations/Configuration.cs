@@ -60,12 +60,12 @@ namespace GymClass_v0._2.Migrations
             }
 
             context.GymClasses.AddOrUpdate(c => c.Name,
-                new GymClass { Name = "SwimmingClass", Description = "Members", StartTime = DateTime.Now, Duration = TimeSpan.FromMinutes(60) },
-                new GymClass { Name = "RunningClass", Description = "OpenClass", StartTime = DateTime.Now.AddHours(-10), Duration = TimeSpan.FromMinutes(45) },
-                new GymClass { Name = "KickboxingClass", Description = "Members+15", StartTime = DateTime.Now.AddDays(-12), Duration = TimeSpan.FromMinutes(60) },
-                new GymClass { Name = "YogaClass", Description = "OpenClass", StartTime = DateTime.Now.AddHours(-8), Duration = TimeSpan.FromMinutes(90) },
-                new GymClass { Name = "AiropicClass", Description = "OpenClass", StartTime = DateTime.Now.AddHours(-11), Duration = TimeSpan.FromMinutes(50) },
-                new GymClass { Name = "KungFu", Description = "Members+10", StartTime = DateTime.Now.AddDays(8), Duration = TimeSpan.FromMinutes(90) }
+                new GymClass { Name = "SwimmingClass", Description = "Advance class, children +5", StartTime = DateTime.Now, Duration = TimeSpan.FromMinutes(60), ClassType = "Member" },
+                new GymClass { Name = "RunningClass", Description = "Beginner class, children +8", StartTime = DateTime.Now.AddHours(-10), Duration = TimeSpan.FromMinutes(45), ClassType = "OpenClass" },
+                new GymClass { Name = "KickboxingClass", Description = "Advance class children +8", StartTime = DateTime.Now.AddDays(-12), Duration = TimeSpan.FromMinutes(60), ClassType ="Member" },
+                new GymClass { Name = "YogaClass", Description = "Beginner class", StartTime = DateTime.Now.AddHours(-8), Duration = TimeSpan.FromMinutes(90), ClassType="OpenClass" },
+                new GymClass { Name = "AiropicClass", Description = "Beginner class, children +8", StartTime = DateTime.Now.AddHours(-11), Duration = TimeSpan.FromMinutes(50), ClassType="Member" },
+                new GymClass { Name = "KungFu", Description = "Advance class, children +10", StartTime = DateTime.Now.AddDays(8), Duration = TimeSpan.FromMinutes(90), ClassType = "OpenClass" }
 
                 );
         }

@@ -1,1 +1,9 @@
-ISSUE_TEMPLATE
+ISSUE_TEMPLATE:
+
+1) Build the application, a shell project.
+2) Build the gym class booking.
+3) Fix the log in, and divied the application between admin, member, annonymous user.
+4) Add seed data and migration.
+5) Improve the registration form.'
+6) Improve the UX.
+7) Implement more jquery.

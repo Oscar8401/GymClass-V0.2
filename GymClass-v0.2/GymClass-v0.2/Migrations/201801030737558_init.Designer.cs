@@ -13,7 +13,7 @@ namespace GymClass_v0._2.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201801021819119_init"; }
+            get { return "201801030737558_init"; }
         }
         
         string IMigrationMetadata.Source

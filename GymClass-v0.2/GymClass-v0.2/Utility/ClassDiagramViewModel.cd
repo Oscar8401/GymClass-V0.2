@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GymClass_v0._2.Models.ViewModel.GymClassViewModel" Collapsed="true">
+    <Position X="1" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAACiAAAAAAAAAAQAAAAgAAQBAAAAAACAAQA=</HashCode>
+      <FileName>Models\ViewModel\GymClassViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GymClass_v0._2.ViewModel.Members" Collapsed="true">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAGAAACAABAAAAAAAAACAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\ViewModel\Members.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GymClass_v0._2.Models.GymClass" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAiAIAAAAAAAAQAIAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GymClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
